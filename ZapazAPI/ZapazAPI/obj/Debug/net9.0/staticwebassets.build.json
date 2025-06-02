@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "H4TrGahynHaPkVwsqBhRwwF8N3u7H/Hcfrvw+2mpyHU=",
+  "Source": "ZapazAPI",
+  "BasePath": "_content/ZapazAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
