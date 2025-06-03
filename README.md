@@ -4,9 +4,15 @@
 <p>This API was created with learning purposes! It's just an example on how to use GET, POST, PUT, and DELETE on HTTPS request.</p>
 <p>Also is intended to be a very basic example for a storage service interface for a "Sneakers Shop" like Adidas or Nike</p>
 
+# Documentation
+<ul>
+  <li>Added model and database context</li>
+  <li>Installed neccesary packages for Swagger and Entity Framework</li>
+</ul>
+
 # <h3>What's Next (To do):
   <ul>
-    <li>[ ] Make the model for the database data</li>
+    <li>[x] Make the model for the database data</li>
     <li>[ ] Make the controller</li>
     <li>[ ] Prepare the database</li>
   </ul>
