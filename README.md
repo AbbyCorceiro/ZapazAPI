@@ -16,7 +16,7 @@
     <li>[x] Make the model for the database data</li>
     <li>[x] Make the controller</li>
     <li>[x] Prepare the database</li>
-    <li>[x] Make the necessary endpoints</li>
+    <li>[ ] Program the endpoints</li>
     <li>[ ] Add elements in the database</li>
   </ul>
 </h3>
