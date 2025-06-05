@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using ZapazAPI.Context;
 
 var builder = WebApplication.CreateBuilder(args);

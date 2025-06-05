@@ -107,5 +107,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "GetZapa",
+    "RelativePath": "api/Zapaz/Gets the available products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "available",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ZapazAPI.Models.Zapa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

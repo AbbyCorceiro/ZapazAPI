@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol.Plugins;
 using ZapazAPI.Context;
 using ZapazAPI.Models;
 
@@ -22,14 +23,14 @@ namespace ZapazAPI.Controllers
         }
 
         // GET: api/Zapas
-        [HttpGet]
+        [HttpGet("Gets all the products")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapas()
         {
             return await _context.Zapas.ToListAsync();
         }
 
         // GET: api/Zapas/5
-        [HttpGet("{id}")]
+        [HttpGet("Gets all the products by id")]
         public async Task<ActionResult<Zapa>> GetZapa(string id)
         {
             var zapa = await _context.Zapas.FindAsync(id);
@@ -39,6 +40,22 @@ namespace ZapazAPI.Controllers
                 return NotFound();
             }
 
+            return zapa;
+        }
+
+        [HttpGet("Gets the available products")]
+        public async Task<ActionResult<Zapa>> GetZapa(bool available)
+        {
+            var zapa = await _context.Zapas.FindAsync(available);
+            if (zapa == null) return NotFound();
+            return zapa;
+        }
+
+        [HttpGet("Gets the products by size")]
+        public async Task<ActionResult<Zapa>> GetZapa(int size) 
+        {
+            var zapa = await _context.Zapas.FindAsync(size);
+            if (zapa == null) return NotFound();
             return zapa;
         }
 
