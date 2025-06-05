@@ -13,8 +13,9 @@
 # <h3>What's Next (To do):
   <ul>
     <li>[x] Make the model for the database data</li>
-    <li>[ ] Make the controller</li>
-    <li>[ ] Prepare the database</li>
+    <li>[x] Make the controller</li>
+    <li>[x] Prepare the database</li>
+    <li>[ ] Add elements in the database</li>
   </ul>
 </h3>
 
