@@ -8,7 +8,7 @@
 <ul>
   <li>Added model and database context</li>
   <li>Installed neccesary packages for Swagger and Entity Framework</li>
-  <li>Added GET endpoints for getting all the products or get them by id, size</li>
+  <li>Added GET endpoints for getting all the products or get them by id, size, availability</li>
 </ul>
 
 # <h3>What's Next (To do):
