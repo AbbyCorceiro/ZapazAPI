@@ -3,12 +3,13 @@
 <h3>About the API</h3>
 <p>This API was created with learning purposes! It's just an example on how to use GET, POST, PUT, and DELETE on HTTPS request.</p>
 <p>Also is intended to be a very basic example for a storage service interface for a "Sneakers Shop" like Adidas or Nike</p>
+<p>The API is using swagger for testing, and Entity Framework for the migrations to the database</p>
 
 # Documentation
 <ul>
   <li>Added model and database context</li>
   <li>Installed neccesary packages for Swagger and Entity Framework</li>
-  <li>Added GET endpoints for getting all the products or get them by id, size, availability</li>
+  <li>Added GET endpoints for getting all the products or get them by id, size, availability, color, genre, sport type</li>
 </ul>
 
 # <h3>What's Next (To do):
@@ -16,7 +17,7 @@
     <li>[x] Make the model for the database data</li>
     <li>[x] Make the controller</li>
     <li>[x] Prepare the database</li>
-    <li>[ ] Program the endpoints</li>
+    <li>[x] Program the endpoints</li>
     <li>[ ] Add elements in the database</li>
   </ul>
 </h3>
