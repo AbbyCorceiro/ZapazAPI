@@ -82,6 +82,14 @@ namespace ZapazAPI.Controllers
             if (zapa == null) return NotFound();
             return zapa;
         }
+
+        [HttpGet("Gets the products by genre")]
+        public async Task<ActionResult<Zapa>> GetZapaGenre(string genre)
+        {
+            var zapa = await _context.Zapas.FindAsync(genre);
+            if (zapa == null) return NotFound();
+            return zapa;
+        }
         // PUT: api/Zapas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

@@ -136,6 +136,32 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "GetZapaBrand",
+    "RelativePath": "api/Zapaz/Gets the products by brand",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brand",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ZapazAPI.Models.Zapa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
     "Method": "GetZapaColor",
     "RelativePath": "api/Zapaz/Gets the products by color",
     "HttpMethod": "GET",
@@ -144,6 +170,32 @@
     "Parameters": [
       {
         "Name": "color",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ZapazAPI.Models.Zapa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "GetZapaGenre",
+    "RelativePath": "api/Zapaz/Gets the products by genre",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "genre",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -171,6 +223,32 @@
       {
         "Name": "size",
         "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ZapazAPI.Models.Zapa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "GetZapaSport",
+    "RelativePath": "api/Zapaz/Gets the products by sport type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sport",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
