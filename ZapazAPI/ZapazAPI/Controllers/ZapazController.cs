@@ -31,7 +31,7 @@ namespace ZapazAPI.Controllers
 
         // GET: api/Zapas/5
         [HttpGet("Gets all the products by id")]
-        public async Task<ActionResult<Zapa>> GetZapa(string id)
+        public async Task<ActionResult<Zapa>> GetZapaId(string id)
         {
             var zapa = await _context.Zapas.FindAsync(id);
 
@@ -44,7 +44,7 @@ namespace ZapazAPI.Controllers
         }
 
         [HttpGet("Gets the available products")]
-        public async Task<ActionResult<Zapa>> GetZapa(bool available)
+        public async Task<ActionResult<Zapa>> GetZapaAv(bool available)
         {
             var zapa = await _context.Zapas.FindAsync(available);
             if (zapa == null) return NotFound();
@@ -52,13 +52,36 @@ namespace ZapazAPI.Controllers
         }
 
         [HttpGet("Gets the products by size")]
-        public async Task<ActionResult<Zapa>> GetZapa(int size) 
+        public async Task<ActionResult<Zapa>> GetZapaSize(int size) 
         {
             var zapa = await _context.Zapas.FindAsync(size);
             if (zapa == null) return NotFound();
             return zapa;
         }
 
+        [HttpGet("Gets the products by color")]
+        public async Task<ActionResult<Zapa>> GetZapaColor(string color)
+        {
+            var zapa = await _context.Zapas.FindAsync(color);
+            if (zapa == null) return NotFound();
+            return zapa;
+        }
+
+        [HttpGet("Gets the products by sport type")]
+        public async Task<ActionResult<Zapa>> GetZapaSport(string sport)
+        {
+            var zapa = await _context.Zapas.FindAsync(sport);
+            if (zapa == null) return NotFound();
+            return zapa;
+        }
+
+        [HttpGet("Gets the products by brand")]
+        public async Task<ActionResult<Zapa>> GetZapaBrand(string brand)
+        {
+            var zapa = await _context.Zapas.FindAsync(brand);
+            if (zapa == null) return NotFound();
+            return zapa;
+        }
         // PUT: api/Zapas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

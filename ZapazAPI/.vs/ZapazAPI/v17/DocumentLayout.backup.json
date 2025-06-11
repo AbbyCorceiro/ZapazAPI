@@ -9,6 +9,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\models\\zapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\models\\zapa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Migrations\\20250611002912_ModelChange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ZapazAPI\\Migrations\\20250611002912_ModelChange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +26,43 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250611002912_ModelChange.cs",
+              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Migrations\\20250611002912_ModelChange.cs",
+              "RelativeDocumentMoniker": "ZapazAPI\\Migrations\\20250611002912_ModelChange.cs",
+              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Migrations\\20250611002912_ModelChange.cs",
+              "RelativeToolTip": "ZapazAPI\\Migrations\\20250611002912_ModelChange.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T00:29:12.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Zapa.cs",
+              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Models\\Zapa.cs",
+              "RelativeDocumentMoniker": "ZapazAPI\\Models\\Zapa.cs",
+              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Models\\Zapa.cs",
+              "RelativeToolTip": "ZapazAPI\\Models\\Zapa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T00:24:09.793Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ZapazController.cs",
               "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Controllers\\ZapazController.cs",
               "RelativeDocumentMoniker": "ZapazAPI\\Controllers\\ZapazController.cs",
-              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Controllers\\ZapazController.cs*",
-              "RelativeToolTip": "ZapazAPI\\Controllers\\ZapazController.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAwAAAAfAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Controllers\\ZapazController.cs",
+              "RelativeToolTip": "ZapazAPI\\Controllers\\ZapazController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwD0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T23:58:35.296Z",
               "EditorCaption": ""
