@@ -11,7 +11,7 @@ using ZapazAPI.Context;
 namespace ZapazAPI.Migrations
 {
     [DbContext(typeof(ZapaDBContext))]
-    [Migration("20250604234153_Initial")]
+    [Migration("20250612212147_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -26,8 +26,11 @@ namespace ZapazAPI.Migrations
 
             modelBuilder.Entity("ZapazAPI.Models.Zapa", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool>("Available")
                         .HasColumnType("bit");
@@ -40,12 +43,23 @@ namespace ZapazAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Genre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Size")
-                        .HasColumnType("int");
+                    b.Property<double?>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Size")
+                        .HasColumnType("float");
+
+                    b.Property<string>("SportType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");

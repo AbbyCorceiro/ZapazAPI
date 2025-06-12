@@ -2,7 +2,7 @@
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
     "Method": "PostZapa",
-    "RelativePath": "api/Zapaz",
+    "RelativePath": "api/Zapaz/Creates a new item in the database (new zapa in the system)",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -27,29 +27,8 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "PutZapa",
-    "RelativePath": "api/Zapaz/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "zapa",
-        "Type": "ZapazAPI.Models.Zapa",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ZapazAPI.Controllers.ZapazController",
     "Method": "DeleteZapa",
-    "RelativePath": "api/Zapaz/{id}",
+    "RelativePath": "api/Zapaz/Deletes an existing product by {id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -92,7 +71,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.String",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -110,7 +89,7 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "GetZapaAv",
+    "Method": "GetZapa",
     "RelativePath": "api/Zapaz/Gets the available products",
     "HttpMethod": "GET",
     "IsController": true,
@@ -120,6 +99,11 @@
         "Name": "available",
         "Type": "System.Boolean",
         "IsRequired": false
+      },
+      {
+        "Name": "z",
+        "Type": "ZapazAPI.Models.Zapa",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -136,7 +120,33 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "GetZapaBrand",
+    "Method": "GetZapa",
+    "RelativePath": "api/Zapaz/Gets the products by {size}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ZapazAPI.Models.Zapa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "GetZapa",
     "RelativePath": "api/Zapaz/Gets the products by brand",
     "HttpMethod": "GET",
     "IsController": true,
@@ -214,32 +224,6 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "GetZapaSize",
-    "RelativePath": "api/Zapaz/Gets the products by size",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "size",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ZapazAPI.Models.Zapa",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ZapazAPI.Controllers.ZapazController",
     "Method": "GetZapaSport",
     "RelativePath": "api/Zapaz/Gets the products by sport type",
     "HttpMethod": "GET",
@@ -263,5 +247,26 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "PutZapa",
+    "RelativePath": "api/Zapaz/Modifies an existing product by {id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "zapa",
+        "Type": "ZapazAPI.Models.Zapa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
