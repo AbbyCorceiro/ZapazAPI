@@ -9,7 +9,7 @@
 <ul>
   <li>Added model and database context</li>
   <li>Installed neccesary packages for Swagger and Entity Framework</li>
-  <li>Added GET endpoints for getting all the products or get them by id, size, availability, color, genre, sport type</li>
+  <li>Added GET endpoints for getting all the products or get them by an specific property</li>
 </ul>
 
 # <h3>What's Next (To do):
@@ -18,7 +18,8 @@
     <li>[x] Make the controller</li>
     <li>[x] Prepare the database</li>
     <li>[x] Program the endpoints</li>
-    <li>[ ] Add elements in the database</li>
+    <li>-[ ] Make the get endpoints work</li>
+    <li>[x] Add elements in the database</li>
   </ul>
 </h3>
 
