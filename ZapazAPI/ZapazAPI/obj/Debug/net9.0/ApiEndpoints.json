@@ -99,37 +99,6 @@
         "Name": "available",
         "Type": "System.Boolean",
         "IsRequired": false
-      },
-      {
-        "Name": "z",
-        "Type": "ZapazAPI.Models.Zapa",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ZapazAPI.Models.Zapa",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "GetZapa",
-    "RelativePath": "api/Zapaz/Gets the products by {size}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "size",
-        "Type": "System.Int32",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -224,6 +193,32 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "GetZapa",
+    "RelativePath": "api/Zapaz/Gets the products by size",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "size",
+        "Type": "System.Double",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ZapazAPI.Models.Zapa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
     "Method": "GetZapaSport",
     "RelativePath": "api/Zapaz/Gets the products by sport type",
     "HttpMethod": "GET",
@@ -251,7 +246,7 @@
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
     "Method": "PutZapa",
-    "RelativePath": "api/Zapaz/Modifies an existing product by {id}",
+    "RelativePath": "api/Zapaz/Modifies an existing product by id",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -259,7 +254,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "zapa",

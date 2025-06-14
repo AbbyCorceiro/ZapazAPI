@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol.Plugins;
+using NuGet.Versioning;
 using ZapazAPI.Context;
 using ZapazAPI.Models;
 
@@ -17,7 +20,6 @@ namespace ZapazAPI.Controllers
     public class ZapazController : ControllerBase
     {
         private readonly ZapaDBContext _context;
-
         public ZapazController(ZapaDBContext context)
         {
             _context = context;
@@ -35,66 +37,61 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<Zapa>> GetZapaId(int id)
         {
             var zapa = await _context.Zapas.FindAsync(id);
-
-            if (zapa == null)
-            {
-                return NotFound();
-            }
-
+            if (zapa == null) return NotFound();
             return zapa;
         }
 
         [HttpGet("Gets the available products")]
         public async Task<ActionResult<Zapa>> GetZapa(bool available)
         {
-            var zapa = await _context.Zapas.FindAsync(available);
+            var zapa = await _context.Zapas.Where(x=> x.Available == available).ToListAsync();
             if (zapa == null) return NotFound();
-            return zapa;
+            return Ok(zapa);
         }
 
-        [HttpGet("Gets the products by {size}")]
-        public async Task<ActionResult<Zapa>> GetZapa(int size) 
+        [HttpGet("Gets the products by size")]
+        public async Task<ActionResult<Zapa>> GetZapa(double size) 
         {
-            var zapa = await _context.Zapas.FindAsync(size);
+            var zapa = await _context.Zapas.Where(x => x.Size == size).ToListAsync();
             if (zapa == null) return NotFound();
-            return zapa;
+            return Ok(zapa);
         }
 
         [HttpGet("Gets the products by color")]
         public async Task<ActionResult<Zapa>> GetZapaColor(string color)
         {
-            var zapa = await _context.Zapas.FindAsync(color);
+            var zapa = await _context.Zapas.Where(x => x.Color == color).ToListAsync();
             if (zapa == null) return NotFound();
-            return zapa;
+            return Ok(zapa);
         }
 
         [HttpGet("Gets the products by sport type")]
         public async Task<ActionResult<Zapa>> GetZapaSport(string sport)
         {
-            var zapa = await _context.Zapas.FindAsync(sport);
+            var zapa = await _context.Zapas.Where(x => x.SportType == sport).ToListAsync();
             if (zapa == null) return NotFound();
-            return zapa;
+            return Ok(zapa);
         }
 
         [HttpGet("Gets the products by brand")]
         public async Task<ActionResult<Zapa>> GetZapa(string brand)
         {
-            var zapa = await _context.Zapas.FindAsync(brand);
+            var zapa = await _context.Zapas.Where(x => x.Brand == brand).ToListAsync();
             if (zapa == null) return NotFound();
-            return NotFound();
+            return Ok(zapa);
             
         }
 
         [HttpGet("Gets the products by genre")]
         public async Task<ActionResult<Zapa>> GetZapaGenre(string genre)
         {
-            var zapa = await _context.Zapas.FindAsync(genre);
+            var zapa = await _context.Zapas.Where(x => x.Genre == genre || x.Genre == "Unisex").ToListAsync();
             if (zapa == null) return NotFound();
-            return zapa;
+            return Ok(zapa);
         }
         // PUT: api/Zapas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("Modifies an existing product by {id}")]
+        [HttpPut("Modifies an existing product by id")]
         public async Task<IActionResult> PutZapa(int id, Zapa zapa)
         {
             if (id != zapa.Id)
@@ -149,7 +146,7 @@ namespace ZapazAPI.Controllers
         }
 
         // DELETE: api/Zapas/5
-        [HttpDelete("Deletes an existing product by {id}")]
+        [HttpDelete("Deletes an existing product by id")]
         public async Task<IActionResult> DeleteZapa(string id)
         {
             var zapa = await _context.Zapas.FindAsync(id);
