@@ -42,7 +42,7 @@ namespace ZapazAPI.Controllers
         }
 
         [HttpGet("Gets the available products")]
-        public async Task<ActionResult<Zapa>> GetZapa(bool available)
+        public async Task<ActionResult<Zapa>> GetZapaAv(bool available)
         {
             var zapa = await _context.Zapas.Where(x=> x.Available == available).ToListAsync();
             if (zapa == null) return NotFound();
@@ -50,7 +50,7 @@ namespace ZapazAPI.Controllers
         }
 
         [HttpGet("Gets the products by size")]
-        public async Task<ActionResult<Zapa>> GetZapa(double size) 
+        public async Task<ActionResult<Zapa>> GetZapaSize(double size) 
         {
             var zapa = await _context.Zapas.Where(x => x.Size == size).ToListAsync();
             if (zapa == null) return NotFound();
@@ -74,12 +74,21 @@ namespace ZapazAPI.Controllers
         }
 
         [HttpGet("Gets the products by brand")]
-        public async Task<ActionResult<Zapa>> GetZapa(string brand)
+        public async Task<ActionResult<Zapa>> GetZapaBrand(string brand)
         {
             var zapa = await _context.Zapas.Where(x => x.Brand == brand).ToListAsync();
             if (zapa == null) return NotFound();
             return Ok(zapa);
             
+        }
+
+        [HttpGet("Gets the products by model")]
+        public async Task<ActionResult<Zapa>> GetZapaModel(string model)
+        {
+            var zapa = await _context.Zapas.Where(x => x.Model.Contains(model) == true).ToListAsync();
+            if (zapa == null) return NotFound();
+            return Ok(zapa);
+
         }
 
         [HttpGet("Gets the products by genre")]

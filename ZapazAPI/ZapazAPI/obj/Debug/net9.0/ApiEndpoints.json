@@ -28,7 +28,7 @@
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
     "Method": "DeleteZapa",
-    "RelativePath": "api/Zapaz/Deletes an existing product by {id}",
+    "RelativePath": "api/Zapaz/Deletes an existing product by id",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -36,7 +36,7 @@
       {
         "Name": "id",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -89,7 +89,7 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "GetZapa",
+    "Method": "GetZapaAv",
     "RelativePath": "api/Zapaz/Gets the available products",
     "HttpMethod": "GET",
     "IsController": true,
@@ -115,7 +115,7 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "GetZapa",
+    "Method": "GetZapaBrand",
     "RelativePath": "api/Zapaz/Gets the products by brand",
     "HttpMethod": "GET",
     "IsController": true,
@@ -193,7 +193,33 @@
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "GetZapa",
+    "Method": "GetZapaModel",
+    "RelativePath": "api/Zapaz/Gets the products by model",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ZapazAPI.Models.Zapa",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "GetZapaSize",
     "RelativePath": "api/Zapaz/Gets the products by size",
     "HttpMethod": "GET",
     "IsController": true,
