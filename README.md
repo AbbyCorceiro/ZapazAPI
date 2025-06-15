@@ -9,7 +9,8 @@
 <ul>
   <li>Added model and database context</li>
   <li>Installed neccesary packages for Swagger and Entity Framework</li>
-  <li>Added GET endpoints for getting all the products or get them by an specific property</li>
+  <li>Added GET, PUT, POST, and DELETE endpoints</li>
+  <li>GET endpoints: Now you can search a trainer by id, brand, model, color, size, genre (male, female, unisex), sport type, and availability</li>
 </ul>
 
 # <h3>What's Next (To do):
@@ -18,8 +19,8 @@
     <li>[x] Make the controller</li>
     <li>[x] Prepare the database</li>
     <li>[x] Program the endpoints</li>
-    <li>-[ ] Make the get endpoints work</li>
     <li>[x] Add elements in the database</li>
+    <li>[x] Test all the endpoints</li>
   </ul>
 </h3>
 
