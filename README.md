@@ -10,7 +10,7 @@
   <li>Added model and database context</li>
   <li>Installed neccesary packages for Swagger and Entity Framework</li>
   <li>Added GET, PUT, POST, and DELETE endpoints</li>
-  <li>GET endpoints: Now you can search a trainer by id, brand, model, color, size, genre (male, female, unisex), sport type, and availability</li>
+  <li>GET endpoints: Now you can search a sneaker by id, brand, model, color, size, genre (male, female, unisex), sport type, and availability</li>
 </ul>
 
 # <h3>What's Next (To do):
