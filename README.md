@@ -22,7 +22,7 @@
     <li>[x] Program the endpoints</li>
     <li>[x] Add elements in the database</li>
     <li>[x] Test all the endpoints</li>
-    <li>[x] Modify the http file:
+    <li>[ ] Modify the http file:
       <ul>
         <li>[ ] GET request for testing</li>
         <li>[ ] POST request for testing</li>
