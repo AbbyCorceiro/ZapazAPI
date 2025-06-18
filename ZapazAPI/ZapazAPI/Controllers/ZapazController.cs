@@ -65,7 +65,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
-        [HttpGet("sport-type")]
+        [HttpGet("sport")]
         public async Task<ActionResult<Zapa>> GetZapaSport(string sport)
         {
             var zapa = await _context.Zapas.Where(x => x.SportType == sport).ToListAsync();

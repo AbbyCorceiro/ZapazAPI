@@ -1,6 +1,57 @@
-@ZapazAPI_HostAddress = http://localhost:5287
+@ZapazAPI_HostAddress = https://localhost:7051
+//Testing values:
+@zapa_color = lightblue
+@zapa_brand = Adidas
+@zapa_model = Fabela
+@zapa_sport = Running
+@zapa_genre = Male
+@zapa_size = 36
+@zapa_available = false
 
 GET {{ZapazAPI_HostAddress}}/api/Zapaz/All-Products
 Accept: application/json
 
 ###
+
+//Getting a sneaker by brand
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/brand?brand={{zapa_brand}}
+Accept: application/json
+
+###
+
+//Getting a sneaker by model
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/model?model={{zapa_model}}
+Accept: application/json
+
+###
+
+//Getting a sneaker by sport --> NOT WORKING!!!!!
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/sport?sport={{zapa_sport}}
+Accept: application/json
+
+###
+
+//Getting a sneaker by genre
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/genre?genre={{zapa_genre}}
+Accept: application/json
+
+###
+
+//Getting a sneaker by color
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/color?color={{zapa_color}}
+Accept: application/json
+
+###
+
+//Getting a sneaker by size
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/size?size={{zapa_size}}
+Accept: application/json
+
+###
+
+//Getting a sneaker by availability
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/available?available={{zapa_available}}
+Accept: application/json
+
+###
+
