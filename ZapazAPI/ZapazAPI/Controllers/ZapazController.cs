@@ -26,14 +26,14 @@ namespace ZapazAPI.Controllers
         }
 
         // GET: api/Zapas
-        [HttpGet("Gets all the products")]
+        [HttpGet("All-Products")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapas()
         {
             return await _context.Zapas.ToListAsync();
         }
 
         // GET: api/Zapas/5
-        [HttpGet("Gets all the products by id")]
+        [HttpGet("{Id}")]
         public async Task<ActionResult<Zapa>> GetZapaId(int id)
         {
             var zapa = await _context.Zapas.FindAsync(id);
@@ -41,7 +41,7 @@ namespace ZapazAPI.Controllers
             return zapa;
         }
 
-        [HttpGet("Gets the available products")]
+        [HttpGet("available")]
         public async Task<ActionResult<Zapa>> GetZapaAv(bool available)
         {
             var zapa = await _context.Zapas.Where(x=> x.Available == available).ToListAsync();
@@ -49,7 +49,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
-        [HttpGet("Gets the products by size")]
+        [HttpGet("size")]
         public async Task<ActionResult<Zapa>> GetZapaSize(double size) 
         {
             var zapa = await _context.Zapas.Where(x => x.Size == size).ToListAsync();
@@ -57,7 +57,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
-        [HttpGet("Gets the products by color")]
+        [HttpGet("color")]
         public async Task<ActionResult<Zapa>> GetZapaColor(string color)
         {
             var zapa = await _context.Zapas.Where(x => x.Color == color).ToListAsync();
@@ -65,7 +65,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
-        [HttpGet("Gets the products by sport type")]
+        [HttpGet("sport-type")]
         public async Task<ActionResult<Zapa>> GetZapaSport(string sport)
         {
             var zapa = await _context.Zapas.Where(x => x.SportType == sport).ToListAsync();
@@ -73,7 +73,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
-        [HttpGet("Gets the products by brand")]
+        [HttpGet("brand")]
         public async Task<ActionResult<Zapa>> GetZapaBrand(string brand)
         {
             var zapa = await _context.Zapas.Where(x => x.Brand == brand).ToListAsync();
@@ -82,7 +82,7 @@ namespace ZapazAPI.Controllers
             
         }
 
-        [HttpGet("Gets the products by model")]
+        [HttpGet("model")]
         public async Task<ActionResult<Zapa>> GetZapaModel(string model)
         {
             var zapa = await _context.Zapas.Where(x => x.Model.Contains(model) == true).ToListAsync();
@@ -91,7 +91,7 @@ namespace ZapazAPI.Controllers
 
         }
 
-        [HttpGet("Gets the products by genre")]
+        [HttpGet("genre")]
         public async Task<ActionResult<Zapa>> GetZapaGenre(string genre)
         {
             var zapa = await _context.Zapas.Where(x => x.Genre == genre || x.Genre == "Unisex").ToListAsync();
@@ -100,7 +100,7 @@ namespace ZapazAPI.Controllers
         }
         // PUT: api/Zapas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("Modifies an existing product by id")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutZapa(int id, Zapa zapa)
         {
             if (id != zapa.Id)
@@ -131,7 +131,7 @@ namespace ZapazAPI.Controllers
 
         // POST: api/Zapas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost("Creates a new item in the database (new zapa in the system)")]
+        [HttpPost("new-zapa")]
         public async Task<ActionResult<Zapa>> PostZapa(Zapa zapa)
         {
             _context.Zapas.Add(zapa);
@@ -155,7 +155,7 @@ namespace ZapazAPI.Controllers
         }
 
         // DELETE: api/Zapas/5
-        [HttpDelete("Deletes an existing product by id")]
+        [HttpDelete("delete")]
         public async Task<IActionResult> DeleteZapa(string id)
         {
             var zapa = await _context.Zapas.FindAsync(id);

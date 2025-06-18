@@ -10,7 +10,7 @@
     },
     "https": {
       "commandName": "Project",
-      "launchBrowser": true, //Añadi para que me ejecute el navegador
+      "launchBrowser": true, //Para que me ejecute el navegador
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

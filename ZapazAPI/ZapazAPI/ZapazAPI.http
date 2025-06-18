@@ -1,6 +1,6 @@
 @ZapazAPI_HostAddress = http://localhost:5287
 
-GET {{ZapazAPI_HostAddress}}/api/Zapaz
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/All-Products
 Accept: application/json
 
 ###
