@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Connections;
@@ -25,15 +26,15 @@ namespace ZapazAPI.Controllers
             _context = context;
         }
 
-        // GET: api/Zapas
-        [HttpGet("All-Products")]
+        // GET: api/Zapaz
+        [HttpGet("Zapas")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapas()
         {
             return await _context.Zapas.ToListAsync();
         }
 
-        // GET: api/Zapas/5
-        [HttpGet("{Id}")]
+        // GET: api/Zapaz/5
+        [HttpGet("Id")]
         public async Task<ActionResult<Zapa>> GetZapaId(int id)
         {
             var zapa = await _context.Zapas.FindAsync(id);
@@ -98,7 +99,16 @@ namespace ZapazAPI.Controllers
             if (zapa == null) return NotFound();
             return Ok(zapa);
         }
-        // PUT: api/Zapas/5
+
+        //[HttpGet("zapa")] --->>>> TRYING TO MAKE A GET ENDPOINT FOR SEARCHING WITH MULTIPLE PARAMETERS
+        //public async Task<ActionResult<Zapa>> GetCustomZapa(string filter) 
+        //{
+        //    var zapa = await _context.Zapas.Where(x => x.GetType().GetProperties().ToList().Contains(filter.) == true).ToListAsync();
+        //    if (zapa == null) return NotFound();
+        //    return Ok(zapa);
+        //}
+
+        // PUT: api/Zapaz/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutZapa(int id, Zapa zapa)
@@ -129,7 +139,7 @@ namespace ZapazAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Zapas
+        // POST: api/Zapaz
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost("new-zapa")]
         public async Task<ActionResult<Zapa>> PostZapa(Zapa zapa)
@@ -154,7 +164,7 @@ namespace ZapazAPI.Controllers
             return CreatedAtAction("GetZapa", new { id = zapa.Id }, zapa);
         }
 
-        // DELETE: api/Zapas/5
+        // DELETE: api/Zapaz/5
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteZapa(string id)
         {

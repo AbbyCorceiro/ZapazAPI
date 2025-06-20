@@ -3,12 +3,12 @@
 @zapa_color = lightblue
 @zapa_brand = Adidas
 @zapa_model = Fabela
-@zapa_sport = Running
+@zapa_sport = Tennis
 @zapa_genre = Male
 @zapa_size = 36
 @zapa_available = false
 
-GET {{ZapazAPI_HostAddress}}/api/Zapaz/All-Products
+GET {{ZapazAPI_HostAddress}}/api/Zapaz/zapas
 Accept: application/json
 
 ###
@@ -25,7 +25,7 @@ Accept: application/json
 
 ###
 
-//Getting a sneaker by sport --> NOT WORKING!!!!!
+//Getting a sneaker by sport
 GET {{ZapazAPI_HostAddress}}/api/Zapaz/sport?sport={{zapa_sport}}
 Accept: application/json
 
@@ -54,4 +54,5 @@ GET {{ZapazAPI_HostAddress}}/api/Zapaz/available?available={{zapa_available}}
 Accept: application/json
 
 ###
+
 
