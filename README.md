@@ -21,7 +21,8 @@
     <li>[x] Prepare the database</li>
     <li>[x] Program the endpoints</li>
     <li>[x] Add elements in the database</li>
-    <li>[x] Test all the endpoints</li>
+    <li>[ ] Test all the endpoints</li>
+    <li>[ ] Make a multiparameter endpoint for searching a specific product</li>
     <li>[ ] Modify the http file:
       <ul>
         <li>[ ] GET request for testing</li>
