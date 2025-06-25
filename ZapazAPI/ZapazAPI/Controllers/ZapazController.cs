@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
@@ -100,13 +103,27 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
-        //[HttpGet("zapa")] --->>>> TRYING TO MAKE A GET ENDPOINT FOR SEARCHING WITH MULTIPLE PARAMETERS
-        //public async Task<ActionResult<Zapa>> GetCustomZapa(string filter) 
+        [HttpGet("zapa")] /*--->>>> TRYING TO MAKE A GET ENDPOINT FOR SEARCHING WITH MULTIPLE PARAMETERS*/
+        public async Task<ActionResult<Zapa>> GetCustomZapa(string filter)
+        {
+            //This still doesn´t filter the zapas correctly, but you can obtain specific zapas based on
+            //your input
+            var zapa = await _context.Zapas.Where(x =>
+            filter.Contains(x.Brand) ||
+            filter.Contains(x.Model) ||
+            filter.Contains(x.Color) || 
+            filter.Contains(x.Size.ToString()) || 
+            filter.Contains(x.SportType) || 
+            filter.Contains(x.Genre)).ToListAsync(); 
+            if (zapa == null) return NotFound();
+            return Ok(zapa);
+        }
+
+        //[HttpGet("search")] //--->>>> TRYING TO MAKE A GET ENDPOINT WITH REGEX SEARCH
+        //public async Task<ActionResult<Zapa>> SearchZapa(string filter)
         //{
-        //    var zapa = await _context.Zapas.Where(x => x.GetType().GetProperties().ToList().Contains(filter.) == true).ToListAsync();
-        //    if (zapa == null) return NotFound();
-        //    return Ok(zapa);
         //}
+
 
         // PUT: api/Zapaz/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
