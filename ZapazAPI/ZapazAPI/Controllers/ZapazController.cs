@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -111,10 +112,10 @@ namespace ZapazAPI.Controllers
             var zapa = await _context.Zapas.Where(x =>
             filter.Contains(x.Brand) ||
             filter.Contains(x.Model) ||
-            filter.Contains(x.Color) || 
-            filter.Contains(x.Size.ToString()) || 
-            filter.Contains(x.SportType) || 
-            filter.Contains(x.Genre)).ToListAsync(); 
+            filter.Contains(x.Color) ||
+            filter.Contains(x.Size.ToString()) ||
+            filter.Contains(x.SportType) ||
+            filter.Contains(x.Genre)).ToListAsync();
             if (zapa == null) return NotFound();
             return Ok(zapa);
         }

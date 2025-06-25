@@ -38,8 +38,7 @@
               "RelativeToolTip": "ZapazAPI\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-17T23:59:40.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T23:59:40.995Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "ZapazAPI\\Models\\Zapa.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAzwAcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T00:24:09.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T00:24:09.793Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "ZapazAPI\\Controllers\\ZapazController.cs",
               "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Controllers\\ZapazController.cs",
               "RelativeToolTip": "ZapazAPI\\Controllers\\ZapazController.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAtwG0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAmwHUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T23:58:35.296Z",
               "EditorCaption": ""
@@ -77,8 +75,7 @@
               "RelativeToolTip": "ZapazAPI\\ZapazAPI.http",
               "ViewState": "AgIAACUAAAAAAAAAAAAkwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-06-18T22:27:36.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T22:27:36.677Z"
             }
           ]
         }
