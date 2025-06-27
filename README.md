@@ -11,7 +11,7 @@
   <li>Installed neccesary packages for Swagger and Entity Framework</li>
   <li>Added GET, PUT, POST, and DELETE endpoints</li>
   <li>GET endpoints: Now you can search a sneaker by id, brand, model, color, size, genre (male, female, unisex), sport type, and availability trough SwaggerUI</li>
-  <li>Added GET request for testing in the http file</li>
+  <li>Added GET, POST, PUT and DELETE request for testing in the http file</li>
 </ul>
 
 # <h3>What's Next (To do):
@@ -21,18 +21,17 @@
     <li>[x] Prepare the database</li>
     <li>[x] Program the endpoints</li>
     <li>[x] Add elements in the database</li>
-    <li>[ ] Test all the endpoints</li>
-    <li>[ ] Make a multiparameter endpoint for searching a specific product</li>
-    <li>[ ] Modify the http file:
+    <li>[x] Test all the endpoints</li>
+    <li>[x] Modify the http file:
       <ul>
-        <li>[ ] GET request for testing</li>
-        <li>[ ] POST request for testing</li>
-        <li>[ ] PUT request for testing</li>
-        <li>[ ] DELETE request for testing</li>
+        <li>[x] GET request for testing</li>
+        <li>[x] POST request for testing</li>
+        <li>[x] PUT request for testing</li>
+        <li>[x] DELETE request for testing</li>
       </ul>
     </li>
   </ul>
 </h3>
 
 # <h3>Objective:</h3>
-The main objective of this exercise is to create a functional API REST for a CRUD application
+The main objective of this exercise is to create an API REST example for a CRUD application
