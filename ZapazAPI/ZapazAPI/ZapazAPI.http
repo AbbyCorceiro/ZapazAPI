@@ -1,4 +1,5 @@
 @ZapazAPI_HostAddress = https://localhost:7051
+
 //Testing values:
 @zapa_color = lightblue
 @zapa_brand = Adidas
@@ -7,7 +8,9 @@
 @zapa_genre = Male
 @zapa_size = 36
 @zapa_available = false
+@zapa_id = 29
 
+//Gets all the sneakers in the database
 GET {{ZapazAPI_HostAddress}}/api/Zapaz/zapas
 Accept: application/json
 
@@ -51,6 +54,48 @@ Accept: application/json
 
 //Getting a sneaker by availability
 GET {{ZapazAPI_HostAddress}}/api/Zapaz/available?available={{zapa_available}}
+Accept: application/json
+
+###
+
+//Adding a sneaker in the database
+POST {{ZapazAPI_HostAddress}}/api/Zapaz/new-zapa
+Accept: application/json
+Content-Type: application/json
+{
+  "id": 0,
+  "brand": "Nike",
+  "model": "Structure 25 Premium",
+  "sportType": "Running",
+  "genre": "Female",
+  "size": 35.5,
+  "color": "pink",
+  "price": 249999,
+  "available": true,
+  "stock": 10
+}
+###
+
+//Modifying a sneaker in the database
+PUT {{ZapazAPI_HostAddress}}/api/Zapaz/modify?id={{zapa_id}}
+Accept: application/json
+Content-Type: application/json
+{
+  "id": {{zapa_id}},
+  "brand": "Nike",
+  "model": "Structure 25 Premium",
+  "sportType": "Running",
+  "genre": "Female",
+  "size": 35.5,
+  "color": "pink",
+  "price": 249999,
+  "available": true,
+  "stock": 10
+}
+###
+
+//Delete a sneaker fromt he database
+DELETE {{ZapazAPI_HostAddress}}/api/Zapaz/delete?id={{zapa_id}}
 Accept: application/json
 
 ###

@@ -108,7 +108,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<Zapa>> GetCustomZapa(string filter)
         {
             //This still doesn´t filter the zapas correctly, but you can obtain specific zapas based on
-            //your input
+            //your input. This not retrieve the best match although...
             var zapa = await _context.Zapas.Where(x =>
             filter.Contains(x.Brand) ||
             filter.Contains(x.Model) ||
@@ -120,15 +120,9 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
-        //[HttpGet("search")] //--->>>> TRYING TO MAKE A GET ENDPOINT WITH REGEX SEARCH
-        //public async Task<ActionResult<Zapa>> SearchZapa(string filter)
-        //{
-        //}
-
-
         // PUT: api/Zapaz/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("modify")]
         public async Task<IActionResult> PutZapa(int id, Zapa zapa)
         {
             if (id != zapa.Id)
@@ -184,7 +178,7 @@ namespace ZapazAPI.Controllers
 
         // DELETE: api/Zapaz/5
         [HttpDelete("delete")]
-        public async Task<IActionResult> DeleteZapa(string id)
+        public async Task<IActionResult> DeleteZapa(int id)
         {
             var zapa = await _context.Zapas.FindAsync(id);
             if (zapa == null)

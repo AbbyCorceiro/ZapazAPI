@@ -1,27 +1,6 @@
 [
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
-    "Method": "PutZapa",
-    "RelativePath": "api/Zapaz/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "zapa",
-        "Type": "ZapazAPI.Models.Zapa",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ZapazAPI.Controllers.ZapazController",
     "Method": "GetZapaAv",
     "RelativePath": "api/Zapaz/available",
     "HttpMethod": "GET",
@@ -108,7 +87,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.String",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -191,6 +170,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ZapazAPI.Controllers.ZapazController",
+    "Method": "PutZapa",
+    "RelativePath": "api/Zapaz/modify",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "zapa",
+        "Type": "ZapazAPI.Models.Zapa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ZapazAPI.Controllers.ZapazController",
