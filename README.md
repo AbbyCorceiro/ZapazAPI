@@ -32,7 +32,7 @@
         <li>[x] DELETE request for testing</li>
       </ul>
       <li>[x] Implement the Repository</li>
-      <li>[x] Make the endpoints work with the service</li>
+      <li>[ ] Make the endpoints work with the service</li>
     </li>
   </ul>
 </h3>
