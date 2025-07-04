@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Models.Zapa",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ZapazAPI.Models.Zapa, ZapazAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -41,7 +41,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Models.Zapa",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ZapazAPI.Models.Zapa, ZapazAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -67,7 +67,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Models.Zapa",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ZapazAPI.Models.Zapa, ZapazAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -109,7 +109,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Models.Zapa",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ZapazAPI.Models.Zapa, ZapazAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -161,7 +161,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Models.Zapa",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ZapazAPI.Models.Zapa, ZapazAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -234,7 +234,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Models.Zapa",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ZapazAPI.Models.Zapa, ZapazAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -260,7 +260,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Models.Zapa",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ZapazAPI.Models.Zapa, ZapazAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -286,7 +286,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Models.Zapa",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ZapazAPI.Models.Zapa, ZapazAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

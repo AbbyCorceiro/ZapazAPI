@@ -49,77 +49,51 @@ namespace ZapazAPI.Controllers
         }
 
         [HttpGet("available")]
-        public async Task<ActionResult<Zapa>> GetZapaAv(bool available)
+        public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaAv(bool available)
         {
-            var zapa = await _context.Zapas.Where(x=> x.Available == available).ToListAsync();
-            if (zapa == null) return NotFound();
-            return Ok(zapa);
+            return await _zapazService.GetZapaAv(available);
         }
 
         [HttpGet("size")]
-        public async Task<ActionResult<Zapa>> GetZapaSize(double size) 
+        public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaSize(double size) 
         {
-            var zapa = await _context.Zapas.Where(x => x.Size == size).ToListAsync();
-            if (zapa == null) return NotFound();
-            return Ok(zapa);
+            return await _zapazService.GetZapaSize(size);
         }
 
         [HttpGet("color")]
-        public async Task<ActionResult<Zapa>> GetZapaColor(string color)
+        public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaColor(string color)
         {
-            var zapa = await _context.Zapas.Where(x => x.Color == color).ToListAsync();
-            if (zapa == null) return NotFound();
-            return Ok(zapa);
+            return await _zapazService.GetZapaColor(color);
         }
 
         [HttpGet("sport")]
-        public async Task<ActionResult<Zapa>> GetZapaSport(string sport)
+        public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaSport(string sport)
         {
-            var zapa = await _context.Zapas.Where(x => x.SportType == sport).ToListAsync();
-            if (zapa == null) return NotFound();
-            return Ok(zapa);
+            return await _zapazService.GetZapaSport(sport);
         }
 
         [HttpGet("brand")]
-        public async Task<ActionResult<Zapa>> GetZapaBrand(string brand)
+        public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaBrand(string brand)
         {
-            var zapa = await _context.Zapas.Where(x => x.Brand == brand).ToListAsync();
-            if (zapa == null) return NotFound();
-            return Ok(zapa);
-            
+            return await _zapazService.GetZapaBrand(brand);
         }
 
         [HttpGet("model")]
-        public async Task<ActionResult<Zapa>> GetZapaModel(string model)
+        public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaModel(string model)
         {
-            var zapa = await _context.Zapas.Where(x => x.Model.Contains(model) == true).ToListAsync();
-            if (zapa == null) return NotFound();
-            return Ok(zapa);
-
+            return await _zapazService.GetZapaModel(model);
         }
 
         [HttpGet("genre")]
-        public async Task<ActionResult<Zapa>> GetZapaGenre(string genre)
+        public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaGenre(string genre)
         {
-            var zapa = await _context.Zapas.Where(x => x.Genre == genre || x.Genre == "Unisex").ToListAsync();
-            if (zapa == null) return NotFound();
-            return Ok(zapa);
+            return await _zapazService.GetZapaGenre(genre);
         }
 
         [HttpGet("zapa")] /*--->>>> TRYING TO MAKE A GET ENDPOINT FOR SEARCHING WITH MULTIPLE PARAMETERS*/
-        public async Task<ActionResult<Zapa>> GetCustomZapa(string filter)
+        public async Task<ActionResult<IEnumerable<Zapa>>> GetCustomZapa(string filter)
         {
-            //This still doesn´t filter the zapas correctly, but you can obtain specific zapas based on
-            //your input. This not retrieve the best match although...
-            var zapa = await _context.Zapas.Where(x =>
-            filter.Contains(x.Brand) ||
-            filter.Contains(x.Model) ||
-            filter.Contains(x.Color) ||
-            filter.Contains(x.Size.ToString()) ||
-            filter.Contains(x.SportType) ||
-            filter.Contains(x.Genre)).ToListAsync();
-            if (zapa == null) return NotFound();
-            return Ok(zapa);
+            return await _zapazService.GetCustomZapa(filter);
         }
 
         // PUT: api/Zapaz/5
