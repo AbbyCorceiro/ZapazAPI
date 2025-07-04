@@ -4,6 +4,7 @@
 <p>This API was created with learning purposes! It's just an example on how to use GET, POST, PUT, and DELETE on HTTPS request.</p>
 <p>Also is intended to be a very basic example for a storage service interface for a "Sneakers Shop" like Adidas or Nike, or even a multibrand sneakers shop</p>
 <p>The API is using swagger for testing, and Entity Framework for the migrations to the database</p>
+<p>It has the Repository design pattern implemented with a service</p>
 
 # Documentation
 <ul>
@@ -12,6 +13,7 @@
   <li>Added GET, PUT, POST, and DELETE endpoints</li>
   <li>GET endpoints: Now you can search a sneaker by id, brand, model, color, size, genre (male, female, unisex), sport type, and availability trough SwaggerUI</li>
   <li>Added GET, POST, PUT and DELETE request for testing in the http file</li>
+  <li>Added repository design pattern with a service (interfac and implementation class)</li>
 </ul>
 
 # <h3>What's Next (To do):
@@ -29,6 +31,8 @@
         <li>[x] PUT request for testing</li>
         <li>[x] DELETE request for testing</li>
       </ul>
+      <li>[x] Implement the Repository</li>
+      <li>[x] Make the endpoints work with the service</li>
     </li>
   </ul>
 </h3>
