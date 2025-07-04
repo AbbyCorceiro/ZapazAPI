@@ -17,6 +17,7 @@ using NuGet.Protocol.Plugins;
 using NuGet.Versioning;
 using ZapazAPI.Context;
 using ZapazAPI.Models;
+using ZapazAPI.Services.ZapazService;
 
 namespace ZapazAPI.Controllers
 {
@@ -25,25 +26,26 @@ namespace ZapazAPI.Controllers
     public class ZapazController : ControllerBase
     {
         private readonly ZapaDBContext _context;
-        public ZapazController(ZapaDBContext context)
+        private readonly IZapazService _zapazService;
+
+        public ZapazController(ZapaDBContext context, IZapazService zapazService)
         {
             _context = context;
+            _zapazService = zapazService;
         }
 
         // GET: api/Zapaz
         [HttpGet("Zapas")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapas()
         {
-            return await _context.Zapas.ToListAsync();
+            return await _zapazService.GetZapas();
         }
 
         // GET: api/Zapaz/5
         [HttpGet("Id")]
         public async Task<ActionResult<Zapa>> GetZapaId(int id)
         {
-            var zapa = await _context.Zapas.FindAsync(id);
-            if (zapa == null) return NotFound();
-            return zapa;
+            return await _zapazService.GetZapaId(id);
         }
 
         [HttpGet("available")]
