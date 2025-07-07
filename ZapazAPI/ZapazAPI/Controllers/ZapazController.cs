@@ -101,30 +101,7 @@ namespace ZapazAPI.Controllers
         [HttpPut("modify")]
         public async Task<IActionResult> PutZapa(int id, Zapa zapa)
         {
-            if (id != zapa.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(zapa).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ZapaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            return await _zapazService.PutZapa(id, zapa);
         }
 
         // POST: api/Zapaz
@@ -132,45 +109,14 @@ namespace ZapazAPI.Controllers
         [HttpPost("new-zapa")]
         public async Task<ActionResult<Zapa>> PostZapa(Zapa zapa)
         {
-            _context.Zapas.Add(zapa);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (ZapaExists(zapa.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtAction("GetZapa", new { id = zapa.Id }, zapa);
+           return await _zapazService.PostZapa(zapa);
         }
 
         // DELETE: api/Zapaz/5
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteZapa(int id)
         {
-            var zapa = await _context.Zapas.FindAsync(id);
-            if (zapa == null)
-            {
-                return NotFound();
-            }
-
-            _context.Zapas.Remove(zapa);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool ZapaExists(int id)
-        {
-            return _context.Zapas.Any(e => e.Id == id);
+           return await _zapazService.DeleteZapa(id);
         }
     }
 }
