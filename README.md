@@ -13,7 +13,8 @@
   <li>Added GET, PUT, POST, and DELETE endpoints</li>
   <li>GET endpoints: Now you can search a sneaker by id, brand, model, color, size, genre (male, female, unisex), sport type, and availability trough SwaggerUI</li>
   <li>Added GET, POST, PUT and DELETE request for testing in the http file</li>
-  <li>Added repository design pattern with a service (interfac and implementation class)</li>
+  <li>Added repository design pattern with a service (interface and implementation class)</li>
+  <li>All endpoints are working with the repository service (GET, PUT, POST, DELETE)</li>
 </ul>
 
 # <h3>What's Next (To do):
@@ -32,7 +33,7 @@
         <li>[x] DELETE request for testing</li>
       </ul>
       <li>[x] Implement the Repository</li>
-      <li>[ ] Make the endpoints work with the service</li>
+      <li>[x] Make the endpoints work with the service</li>
     </li>
   </ul>
 </h3>
