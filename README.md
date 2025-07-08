@@ -2,9 +2,9 @@
 
 <h3>About the API</h3>
 <p>This API was created with learning purposes! It's just an example on how to use GET, POST, PUT, and DELETE on HTTPS request.</p>
-<p>Also is intended to be a very basic example for a storage service interface for a "Sneakers Shop" like Adidas or Nike, or even a multibrand sneakers shop</p>
-<p>The API is using swagger for testing, and Entity Framework for the migrations to the database</p>
-<p>It has the Repository design pattern implemented with a service</p>
+<p>Also is intended to be a very basic example for a storage service interface for a "Sneakers Shop" like Adidas or Nike, or even a multibrand sneakers shop.</p>
+<p>The API is using swagger for testing, and Entity Framework for the migrations to the database.</p>
+<p>It has the Repository design pattern implemented with a service.</p>
 
 # Documentation
 <ul>
