@@ -8,7 +8,7 @@
 @zapa_genre = Male
 @zapa_size = 36
 @zapa_available = false
-@zapa_id = 29
+@zapa_id = 32
 
 //Gets all the sneakers in the database
 GET {{ZapazAPI_HostAddress}}/api/Zapaz/zapas
@@ -90,7 +90,7 @@ Content-Type: application/json
   "color": "pink",
   "price": 249999,
   "available": true,
-  "stock": 10
+  "stock": 9
 }
 ###
 

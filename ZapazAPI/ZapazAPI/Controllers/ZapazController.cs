@@ -90,7 +90,7 @@ namespace ZapazAPI.Controllers
             return await _zapazService.GetZapaGenre(genre);
         }
 
-        [HttpGet("zapa")] /*--->>>> TRYING TO MAKE A GET ENDPOINT FOR SEARCHING WITH MULTIPLE PARAMETERS*/
+        [HttpGet("zapa")] 
         public async Task<ActionResult<IEnumerable<Zapa>>> GetCustomZapa(string filter)
         {
             return await _zapazService.GetCustomZapa(filter);
