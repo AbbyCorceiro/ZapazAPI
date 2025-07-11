@@ -6,9 +6,9 @@
 @zapa_model = Fabela
 @zapa_sport = Tennis
 @zapa_genre = Male
-@zapa_size = 36
+@zapa_size = 35.5
 @zapa_available = false
-@zapa_id = 32
+@zapa_id = 36
 
 //Gets all the sneakers in the database
 GET {{ZapazAPI_HostAddress}}/api/Zapaz/zapas

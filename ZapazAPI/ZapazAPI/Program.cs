@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using ZapazAPI.Context;
+using ZapazAPI.Repository;
 using ZapazAPI.Services.ZapazService;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IZapazService, ZapazService>();
+builder.Services.AddScoped<IZapazRepo, ZapazRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

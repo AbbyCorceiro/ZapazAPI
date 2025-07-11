@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ZapazAPI.Models;
+﻿using ZapazAPI.Models;
 
-namespace ZapazAPI.Services.ZapazService
+namespace ZapazAPI.Repository
 {
-    public interface IZapazService
+    public interface IZapazRepo
     {
         //GET 
         Task<IEnumerable<Zapa>> GetZapas();
-        Task<Zapa?>GetZapaId(int id);
+        Task<Zapa?> GetZapaId(int id);
         Task<IEnumerable<Zapa>> GetZapaAv(bool available);
         Task<IEnumerable<Zapa>> GetZapaSize(double size);
         Task<IEnumerable<Zapa>> GetZapaColor(string color);
