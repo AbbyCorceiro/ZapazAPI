@@ -82,7 +82,7 @@ namespace ZapazAPI.Repository
             filter.Contains(x.Genre)).ToListAsync();
         }
 
-        //PUT       ---TO FIX
+        //PUT    
         public async Task PutZapa(int id, Zapa zapa)
         {
             _context.Entry(zapa).State = EntityState.Modified;
@@ -90,7 +90,7 @@ namespace ZapazAPI.Repository
             return;
         }
 
-        //POST ---TO FIX
+        //POST 
         public async Task<Zapa> PostZapa(Zapa zapa)
         {
             _context.Zapas.Add(zapa);
@@ -98,7 +98,7 @@ namespace ZapazAPI.Repository
             return zapa;
         }
             
-        //DELETE ---TO FIX
+        //DELETE
         public async Task DeleteZapa(int id)
         {
             var zapa = await _context.Zapas.FindAsync(id);
