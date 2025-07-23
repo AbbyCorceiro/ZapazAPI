@@ -269,3 +269,8 @@ C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\bin\
 C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Hu\Documents\Programming Projects\Projects\Zapaz\ZapazAPI\ZapazAPI\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json

@@ -62,7 +62,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaSize(double size) 
         {
             var zapa = await _zapazService.GetZapaSize(size);
-            if (zapa.IsNullOrEmpty()) return NotFound();
+            if (!zapa.Any()) return NotFound();
             return Ok(zapa);
         }
 
@@ -70,7 +70,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaColor(string color)
         {
             var zapa = await _zapazService.GetZapaColor(color);
-            if (zapa.IsNullOrEmpty()) return NotFound();
+            if (!zapa.Any()) return NotFound();
             return Ok(zapa);
         }
 
@@ -78,7 +78,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaSport(string sport)
         {
             var zapa = await _zapazService.GetZapaSport(sport);
-            if (zapa.IsNullOrEmpty()) return NotFound();
+            if (!zapa.Any()) return NotFound();
             return Ok(zapa);
         }
 
@@ -86,7 +86,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaBrand(string brand)
         {
             var zapa = await _zapazService.GetZapaBrand(brand);
-            if (zapa.IsNullOrEmpty()) return NotFound();
+            if (!zapa.Any()) return NotFound();
             return Ok(zapa);
         }
 
@@ -94,7 +94,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaModel(string model)
         {
             var zapa = await _zapazService.GetZapaModel(model);
-            if (zapa.IsNullOrEmpty()) return NotFound();
+            if (!zapa.Any()) return NotFound();
             return Ok(zapa);
         }
 
@@ -102,7 +102,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaGenre(string genre)
         {
             var zapa = await _zapazService.GetZapaGenre(genre);
-            if (zapa.IsNullOrEmpty()) return NotFound();
+            if (!zapa.Any()) return NotFound();
             return Ok(zapa);
         }
 
@@ -110,7 +110,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<IEnumerable<Zapa>>> GetCustomZapa(string filter)
         {
             var zapa =  await _zapazService.GetCustomZapa(filter);
-            if (zapa.IsNullOrEmpty()) return NotFound();
+            if (!zapa.Any()) return NotFound();
             return Ok(zapa);
         }
 
