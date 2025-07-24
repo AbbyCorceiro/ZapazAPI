@@ -5,6 +5,7 @@
 <p>Also is intended to be a very basic example for a storage service interface for a "Sneakers Shop" like Adidas or Nike, or even a multibrand sneakers shop.</p>
 <p>The API is using swagger for testing, and Entity Framework for the migrations to the database.</p>
 <p>It has the Repository design pattern implemented with a service.</p>
+<p>Is intended to implement authentication and authorization for securing the API</p>
 
 # Documentation
 <ul>
@@ -19,22 +20,12 @@
 
 # <h3>What's Next (To do):
   <ul>
-    <li>[x] Make the model for the database data</li>
-    <li>[x] Make the controller</li>
-    <li>[x] Prepare the database</li>
-    <li>[x] Program the endpoints</li>
-    <li>[x] Add elements in the database</li>
-    <li>[x] Test all the endpoints</li>
-    <li>[x] Modify the http file:
-      <ul>
-        <li>[x] GET request for testing</li>
-        <li>[x] POST request for testing</li>
-        <li>[x] PUT request for testing</li>
-        <li>[x] DELETE request for testing</li>
-      </ul>
-      <li>[x] Implement the Repository</li>
-      <li>[x] Make the endpoints work with the service</li>
-    </li>
+    <li>[x] Add jwt in the appsettings.json</li>
+    <li>[x] Configure jwt in program.cs</li>
+    <li>[ ] Add User and UserDTO entities</li>
+    <li>[ ] Program the password hashing for security</li>
+    <li>[ ] Add authentication based on the credentials of the user</li>
+    <li>[ ] Add authorization based on the user's rol (Admin, Guest)</li>
   </ul>
 </h3>
 
