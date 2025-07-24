@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ZapazAPI.Entities;
 using ZapazAPI.Models;
 
 namespace ZapazAPI.Context
