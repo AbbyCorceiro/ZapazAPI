@@ -22,7 +22,7 @@
   <ul>
     <li>[x] Add jwt in the appsettings.json</li>
     <li>[x] Configure jwt in program.cs</li>
-    <li>[ ] Add User and UserDTO entities</li>
+    <li>[x] Add User and UserDTO entities</li>
     <li>[ ] Program the password hashing for security</li>
     <li>[ ] Add authentication based on the credentials of the user</li>
     <li>[ ] Add authorization based on the user's rol (Admin, Guest)</li>
