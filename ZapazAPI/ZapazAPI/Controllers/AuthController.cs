@@ -1,0 +1,35 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using ZapazAPI.Entities;
+using ZapazAPI.Models;
+
+namespace ZapazAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AuthController : ControllerBase
+    {
+        public static User user = new();
+
+        [HttpPost("register")]
+        public ActionResult<User> Register(UserDto request) 
+        {
+            var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
+            user.Username = request.Username;
+            user.PasswordHash = hashedPassword;
+            return Ok(user);
+        }
+
+        [HttpPost("login")]
+        public ActionResult<string> Login(UserDto request) 
+        {
+            //Fix the conditionals for mayor security (see advice and make a research)
+            if (user.Username != request.Username) return BadRequest("User not found");
+            if (new PasswordHasher<User>().VerifyHashedPassword(user, user.PasswordHash, request.Password)
+                == PasswordVerificationResult.Failed) return BadRequest("Wrong password");
+            string token = "success";
+            return Ok(token);
+        }
+    }
+}
