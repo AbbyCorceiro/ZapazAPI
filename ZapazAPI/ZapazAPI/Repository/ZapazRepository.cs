@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ZapazAPI.Context;
+using ZapazAPI.Entities;
 using ZapazAPI.Models;
 
 namespace ZapazAPI.Repository
@@ -8,11 +10,33 @@ namespace ZapazAPI.Repository
     public class ZapazRepository : IZapazRepo
     {
         private readonly ZapaDBContext _context;
-
         public ZapazRepository(ZapaDBContext context)
         { 
             _context = context;
         }
+
+        public async Task<User?> Register(UserDto request)
+        {
+            if (await _context.Users.AnyAsync(u => u.PasswordHash == request.Password)) return null;
+            var user = new User();
+            var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
+            user.Username = request.Username;
+            user.PasswordHash = hashedPassword;
+            _context.Users.Add(user);  
+            await _context.SaveChangesAsync();
+            return user;
+        }
+
+        public async Task<string?> Login(UserDto request)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username);
+            if(user is null) return null;
+            if (new PasswordHasher<User>().VerifyHashedPassword(user, user.PasswordHash, request.Password)
+             == PasswordVerificationResult.Failed) return null;
+            string token = "success";
+            return token;
+        }
+
         //GET 
         //-all:
         public async Task<IEnumerable<Zapa>> GetZapas()

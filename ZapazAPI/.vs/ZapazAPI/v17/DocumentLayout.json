@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\repository\\izapazrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\repository\\izapazrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\repository\\zapazrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\repository\\zapazrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\services\\zapazservice\\zapazservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\services\\zapazservice\\zapazservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\context\\zapadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\context\\zapadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|c:\\users\\hu\\documents\\programming projects\\projects\\zapaz\\zapazapi\\zapazapi\\services\\zapazservice\\izapazservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F94B9947-A9E1-41C7-AF0E-FEDCB26BD05F}|ZapazAPI\\ZapazAPI.csproj|solutionrelative:zapazapi\\services\\zapazservice\\izapazservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,85 +30,68 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ZapaDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Context\\ZapaDBContext.cs",
-              "RelativeDocumentMoniker": "ZapazAPI\\Context\\ZapaDBContext.cs",
-              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Context\\ZapaDBContext.cs",
-              "RelativeToolTip": "ZapazAPI\\Context\\ZapaDBContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "IZapazRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Repository\\IZapazRepo.cs",
+              "RelativeDocumentMoniker": "ZapazAPI\\Repository\\IZapazRepo.cs",
+              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Repository\\IZapazRepo.cs",
+              "RelativeToolTip": "ZapazAPI\\Repository\\IZapazRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T23:09:12.787Z",
+              "WhenOpened": "2025-07-29T22:44:41.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ZapazRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Repository\\ZapazRepository.cs",
+              "RelativeDocumentMoniker": "ZapazAPI\\Repository\\ZapazRepository.cs",
+              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Repository\\ZapazRepository.cs",
+              "RelativeToolTip": "ZapazAPI\\Repository\\ZapazRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T22:44:39.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ZapazService.cs",
+              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Services\\ZapazService\\ZapazService.cs",
+              "RelativeDocumentMoniker": "ZapazAPI\\Services\\ZapazService\\ZapazService.cs",
+              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Services\\ZapazService\\ZapazService.cs",
+              "RelativeToolTip": "ZapazAPI\\Services\\ZapazService\\ZapazService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwB8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T22:44:25.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IZapazService.cs",
+              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Services\\ZapazService\\IZapazService.cs",
+              "RelativeDocumentMoniker": "ZapazAPI\\Services\\ZapazService\\IZapazService.cs",
+              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Services\\ZapazService\\IZapazService.cs",
+              "RelativeToolTip": "ZapazAPI\\Services\\ZapazService\\IZapazService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T22:42:38.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ZapazAPI\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Controllers\\AuthController.cs",
               "RelativeToolTip": "ZapazAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T23:03:48.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "ZapazAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\appsettings.json",
-              "RelativeToolTip": "ZapazAPI\\appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-23T18:55:42.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Models\\UserDto.cs",
-              "RelativeDocumentMoniker": "ZapazAPI\\Models\\UserDto.cs",
-              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Models\\UserDto.cs",
-              "RelativeToolTip": "ZapazAPI\\Models\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T23:00:23.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "ZapazAPI\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Entities\\User.cs",
-              "RelativeToolTip": "ZapazAPI\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T22:58:31.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Program.cs",
-              "RelativeDocumentMoniker": "ZapazAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\Hu\\Documents\\Programming Projects\\Projects\\Zapaz\\ZapazAPI\\ZapazAPI\\Program.cs",
-              "RelativeToolTip": "ZapazAPI\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwBwAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T22:16:30.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-25T23:03:48.866Z"
             }
           ]
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZapazAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a75c53f8391041f667f001f6931216cddd5dfb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e386070405e37972fbb83be8feb77e356721496")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZapazAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZapazAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

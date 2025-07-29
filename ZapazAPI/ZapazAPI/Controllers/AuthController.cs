@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 using ZapazAPI.Entities;
 using ZapazAPI.Models;
+using ZapazAPI.Services.ZapazService;
 
 namespace ZapazAPI.Controllers
 {
@@ -10,26 +13,25 @@ namespace ZapazAPI.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        public static User user = new();
-
-        [HttpPost("register")]
-        public ActionResult<User> Register(UserDto request) 
+        private readonly IZapazService _zapazService;
+        public AuthController(IZapazService zapazService) 
         {
-            var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
-            user.Username = request.Username;
-            user.PasswordHash = hashedPassword;
-            return Ok(user);
+            _zapazService = zapazService;
         }
 
-        [HttpPost("login")]
-        public ActionResult<string> Login(UserDto request) 
+        [HttpPost("register")]
+        public async Task<ActionResult<User>> Register(UserDto request) 
         {
-            //Fix the conditionals for mayor security (see advice and make a research)
-            if (user.Username != request.Username) return BadRequest("User not found");
-            if (new PasswordHasher<User>().VerifyHashedPassword(user, user.PasswordHash, request.Password)
-                == PasswordVerificationResult.Failed) return BadRequest("Wrong password");
-            string token = "success";
-            return Ok(token);
+            var result = await _zapazService.RegisterAsync(request);
+            return Ok(result);
+        }
+
+
+        [HttpPost("login")]
+        public async Task<ActionResult<string>> Login(UserDto request) 
+        {
+            var result = await _zapazService.LoginAsync(request);
+            return Ok(result);  
         }
     }
 }

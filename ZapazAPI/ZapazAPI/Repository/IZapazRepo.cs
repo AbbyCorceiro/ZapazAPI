@@ -1,9 +1,16 @@
-﻿using ZapazAPI.Models;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using ZapazAPI.Entities;
+using ZapazAPI.Models;
 
 namespace ZapazAPI.Repository
 {
     public interface IZapazRepo
     {
+        //Authetication and authorization
+        Task<User?> Register(UserDto request);
+        Task<string?> Login(UserDto request);
+
         //GET 
         Task<IEnumerable<Zapa>> GetZapas();
         Task<Zapa?> GetZapaId(int id);

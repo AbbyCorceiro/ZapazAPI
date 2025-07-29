@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using System.Net;
 using System.Runtime.CompilerServices;
 using ZapazAPI.Context;
 using ZapazAPI.Controllers;
+using ZapazAPI.Entities;
 using ZapazAPI.Models;
 using ZapazAPI.Repository;
 
@@ -18,6 +20,16 @@ namespace ZapazAPI.Services.ZapazService
         public ZapazService(IZapazRepo zapazRepo)
         {
             _zapazRepo = zapazRepo;
+        }
+
+        public async Task<User?> RegisterAsync(UserDto request)
+        {
+            return await _zapazRepo.Register(request);
+        }
+
+        public async Task<string?> LoginAsync(UserDto request) 
+        {
+            return await _zapazRepo.Login(request);
         }
 
         //GET 
