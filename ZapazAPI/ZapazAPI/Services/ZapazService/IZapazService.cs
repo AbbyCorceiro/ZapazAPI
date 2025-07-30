@@ -9,7 +9,7 @@ namespace ZapazAPI.Services.ZapazService
     public interface IZapazService
     {
         //Authentication and authorization
-        Task<User?> RegisterAsync(UserDto request);
+        Task<UserDto?> RegisterAsync(UserDto request);
         Task<string?> LoginAsync(UserDto request);
 
         //GET 

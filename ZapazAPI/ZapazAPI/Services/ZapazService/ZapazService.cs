@@ -8,7 +8,6 @@ using System.Net;
 using System.Runtime.CompilerServices;
 using ZapazAPI.Context;
 using ZapazAPI.Controllers;
-using ZapazAPI.Entities;
 using ZapazAPI.Models;
 using ZapazAPI.Repository;
 
@@ -17,14 +16,18 @@ namespace ZapazAPI.Services.ZapazService
     public class ZapazService : IZapazService
     {
         private readonly IZapazRepo _zapazRepo;
-        public ZapazService(IZapazRepo zapazRepo)
-        {
-            _zapazRepo = zapazRepo;
-        }
+        public ZapazService(IZapazRepo zapazRepo) => _zapazRepo = zapazRepo;
 
-        public async Task<User?> RegisterAsync(UserDto request)
+        public async Task<UserDto?> RegisterAsync(UserDto request)
         {
-            return await _zapazRepo.Register(request);
+            await _zapazRepo.Register(request);
+            var user = new UserDto()
+            {
+                Username = request.Username,
+                Password = request.Password,
+            };
+
+            return user;
         }
 
         public async Task<string?> LoginAsync(UserDto request) 

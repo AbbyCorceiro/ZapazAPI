@@ -10,10 +10,7 @@ namespace ZapazAPI.Repository
     public class ZapazRepository : IZapazRepo
     {
         private readonly ZapaDBContext _context;
-        public ZapazRepository(ZapaDBContext context)
-        { 
-            _context = context;
-        }
+        public ZapazRepository(ZapaDBContext context) => _context = context;
 
         public async Task<User?> Register(UserDto request)
         {

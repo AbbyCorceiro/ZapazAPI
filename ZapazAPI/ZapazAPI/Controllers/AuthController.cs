@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
-using ZapazAPI.Entities;
 using ZapazAPI.Models;
 using ZapazAPI.Services.ZapazService;
 
@@ -14,13 +13,10 @@ namespace ZapazAPI.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IZapazService _zapazService;
-        public AuthController(IZapazService zapazService) 
-        {
-            _zapazService = zapazService;
-        }
+        public AuthController(IZapazService zapazService) => _zapazService = zapazService;
 
         [HttpPost("register")]
-        public async Task<ActionResult<User>> Register(UserDto request) 
+        public async Task<ActionResult<UserDto>> Register(UserDto request) 
         {
             var result = await _zapazService.RegisterAsync(request);
             return Ok(result);

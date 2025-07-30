@@ -41,7 +41,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "ZapazAPI.Entities.User",
+        "Type": "ZapazAPI.Models.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
