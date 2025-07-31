@@ -27,6 +27,7 @@ namespace ZapazAPI.Controllers
         public async Task<ActionResult<string>> Login(UserDto request) 
         {
             var result = await _zapazService.LoginAsync(request);
+            if (result is null) return BadRequest("Invalid username or password");
             return Ok(result);  
         }
     }
