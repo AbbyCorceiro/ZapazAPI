@@ -17,6 +17,7 @@
   <li>Added repository design pattern with a service (interface and implementation class)</li>
   <li>All endpoints are working with the repository service (GET, PUT, POST, DELETE)</li>
   <li>Added User and UserDto for SignIn and LogIn the user with password hashing</li>
+  <li>Added Jwt for the authentication</li>
 </ul>
 
 # <h3>What's Next (To do):
