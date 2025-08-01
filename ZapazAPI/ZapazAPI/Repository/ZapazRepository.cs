@@ -1,6 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using NuGet.Common;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using ZapazAPI.Context;
 using ZapazAPI.Entities;
 using ZapazAPI.Models;
@@ -10,7 +15,12 @@ namespace ZapazAPI.Repository
     public class ZapazRepository : IZapazRepo
     {
         private readonly ZapaDBContext _context;
-        public ZapazRepository(ZapaDBContext context) => _context = context;
+        private readonly IConfiguration _configuration;
+        public ZapazRepository(ZapaDBContext context, IConfiguration configuration) 
+        { 
+            _context = context; 
+            _configuration = configuration;
+        }
 
         public async Task<User?> Register(UserDto request)
         {
@@ -30,8 +40,31 @@ namespace ZapazAPI.Repository
             if(user is null) return null;
             if (new PasswordHasher<User>().VerifyHashedPassword(user, user.PasswordHash, request.Password)
              == PasswordVerificationResult.Failed) return null;
-            string token = "success";
+            string token = CreateToken(user);
             return token;
+        }
+
+        //Creating the tokens :
+        private string CreateToken(User user) 
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Username)
+            };
+            var key = new SymmetricSecurityKey
+                (
+                    Encoding.UTF8.GetBytes(_configuration.GetValue<string>("Jwt:Key")!)
+                );
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var tokenDescriptor = new JwtSecurityToken(
+                    issuer: _configuration.GetValue<string>("Jwt:Issuer"),
+                    audience: _configuration.GetValue<string>("Jwt:Audience"),
+                    claims: claims,
+                    expires: DateTime.UtcNow.AddDays(1),
+                    signingCredentials: creds
+            );
+            return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
         }
 
         //GET 
