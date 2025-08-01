@@ -25,8 +25,8 @@
     <li>[x] Configure jwt in program.cs</li>
     <li>[x] Add User and UserDTO entities</li>
     <li>[x] Program the password hashing for security</li>
-    <li>[ ] Add authentication based on the credentials of the user</li>
-    <li>    [ ] Code the method for generating tokens</li>
+    <li>[x] Add authentication based on the credentials of the user</li>
+    <li>    [x] Code the method for generating tokens</li>
     <li>[ ] Add authorization based on the user's rol (Admin, Guest)</li>
   </ul>
 </h3>
