@@ -49,12 +49,13 @@ namespace ZapazAPI.Repository
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Username)
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Role, user.Role)
             };
-            var key = new SymmetricSecurityKey
-                (
+            var key = new SymmetricSecurityKey(
                     Encoding.UTF8.GetBytes(_configuration.GetValue<string>("Jwt:Key")!)
-                );
+            );
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var tokenDescriptor = new JwtSecurityToken(
