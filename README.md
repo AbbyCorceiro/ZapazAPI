@@ -28,6 +28,7 @@
     <li>[x] Program the password hashing for security</li>
     <li>[x] Add authentication based on the credentials of the user</li>
     <li>    [x] Code the method for generating tokens</li>
+    <li>[ ] Check that the signature verification doesn't fail</li>
     <li>[ ] Add authorization based on the user's rol (Admin, Guest)</li>
   </ul>
 </h3>
