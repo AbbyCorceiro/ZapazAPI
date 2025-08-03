@@ -5,7 +5,7 @@
 <p>Also is intended to be a very basic example for a storage service interface for a "Sneakers Shop" like Adidas or Nike, or even a multibrand sneakers shop.</p>
 <p>The API is using swagger for testing, and Entity Framework for the migrations to the database.</p>
 <p>It has the Repository design pattern implemented with a service.</p>
-<p>Is intended to implement authentication and authorization for securing the API</p>
+<p>Has authentication and authorization implemented for securing the API</p>
 
 # Documentation
 <ul>
@@ -28,8 +28,8 @@
     <li>[x] Program the password hashing for security</li>
     <li>[x] Add authentication based on the credentials of the user</li>
     <li>    [x] Code the method for generating tokens</li>
-    <li>[ ] Check that the signature verification doesn't fail</li>
-    <li>[ ] Add authorization based on the user's rol (Admin, Guest)</li>
+    <li>[x] Check that the signature verification doesn't fail</li>
+    <li>[x] Add authorization based on the user's rol (Admin, Guest)</li>
   </ul>
 </h3>
 
