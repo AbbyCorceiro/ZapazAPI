@@ -24,7 +24,7 @@ namespace ZapazAPI.Repository
 
         public async Task<User?> Register(UserDto request)
         {
-            if (await _context.Users.AnyAsync(u => u.PasswordHash == request.Password)) return null;
+            if (await _context.Users.AnyAsync(u => u.Username == request.Username)) return null;
             var user = new User();
             var hashedPassword = new PasswordHasher<User>().HashPassword(user, request.Password);
             user.Username = request.Username;

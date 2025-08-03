@@ -17,7 +17,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NuGet.Protocol.Plugins;
 using NuGet.Versioning;
-using ZapazAPI.Context;
 using ZapazAPI.Models;
 using ZapazAPI.Services.ZapazService;
 
@@ -35,6 +34,7 @@ namespace ZapazAPI.Controllers
         }
 
         // GET: api/Zapaz
+        [Authorize]
         [HttpGet("Zapas")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapas()
         {
@@ -43,6 +43,7 @@ namespace ZapazAPI.Controllers
         }
 
         // GET: api/Zapaz/5
+        [Authorize]
         [HttpGet("Id")]
         public async Task<ActionResult<Zapa>> GetZapaId(int id)
         {
@@ -51,6 +52,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
+        [Authorize]
         [HttpGet("available")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaAv(bool available)
         {
@@ -59,6 +61,7 @@ namespace ZapazAPI.Controllers
             return Ok(result);
         }
 
+        [Authorize]
         [HttpGet("size")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaSize(double size) 
         {
@@ -67,6 +70,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
+        [Authorize]
         [HttpGet("color")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaColor(string color)
         {
@@ -75,6 +79,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
+        [Authorize]
         [HttpGet("sport")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaSport(string sport)
         {
@@ -83,6 +88,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
+        [Authorize]
         [HttpGet("brand")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaBrand(string brand)
         {
@@ -91,6 +97,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
+        [Authorize]
         [HttpGet("model")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaModel(string model)
         {
@@ -99,6 +106,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
+        [Authorize]
         [HttpGet("genre")]
         public async Task<ActionResult<IEnumerable<Zapa>>> GetZapaGenre(string genre)
         {
@@ -107,6 +115,7 @@ namespace ZapazAPI.Controllers
             return Ok(zapa);
         }
 
+        [Authorize]
         [HttpGet("zapa")] 
         public async Task<ActionResult<IEnumerable<Zapa>>> GetCustomZapa(string filter)
         {
@@ -117,6 +126,7 @@ namespace ZapazAPI.Controllers
 
         // PUT: api/Zapaz/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Admin")]
         [HttpPut("modify")]
         public async Task<IActionResult> PutZapa(int id, Zapa zapa)
         {
@@ -128,6 +138,7 @@ namespace ZapazAPI.Controllers
 
         // POST: api/Zapaz
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Admin")]
         [HttpPost("new-zapa")]
         public async Task<ActionResult<Zapa>> PostZapa(Zapa zapa)
         {
@@ -136,6 +147,7 @@ namespace ZapazAPI.Controllers
         }
 
         // DELETE: api/Zapaz/5
+        [Authorize(Roles = "Admin")]
         [HttpDelete("delete")]
         public async Task<IActionResult> DeleteZapa(int id) 
         { 
