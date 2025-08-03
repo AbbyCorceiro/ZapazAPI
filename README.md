@@ -18,6 +18,7 @@
   <li>All endpoints are working with the repository service (GET, PUT, POST, DELETE)</li>
   <li>Added User and UserDto for SignIn and LogIn the user with password hashing</li>
   <li>Added Jwt for the authentication</li>
+  <li>Added authorization based on the user role</li>
 </ul>
 
 # <h3>What's Next (To do):
